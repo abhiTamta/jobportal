@@ -11,7 +11,15 @@ const Header = () => {
       </div>
       <div className="menu">menu</div>
       <div className="search">search</div>
-      <div className="button">buttom</div>
+      <div className="flex items-center gap-5">
+        <div className="flex gap-3">
+          <button className="border border-blue-500 text-blue-500 rounded-md px-5 py-1 font-bold hover:bg-slate-100" type="button">Login</button>
+          <button className="border rounded-md px-5 py-1 bg-orange-700 text-white font-bold hover:bg-orange-500" type="button">Register</button>
+        </div>
+        <div className="">
+          For Employers
+        </div>
+      </div>
     </header>
   )
 }
