@@ -1,8 +1,8 @@
-import React from 'react'
+import LayoutRouter from "./routers/LayoutRouter"
 
 const App = () => {
   return (
-    <div>App</div>
+    <LayoutRouter />
   )
 }
 

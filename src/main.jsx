@@ -1,9 +1,10 @@
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
-import './assets/css/global.css'
+import './global.css'
+import { RouterProvider } from 'react-router-dom'
 
 createRoot(document.getElementById('root')).render(
-    <div className="main">
-      <App />
-    </div>
+  <div className="w-screen relative">
+    <RouterProvider router={<App />} />
+  </div>
 )
