@@ -1,9 +1,9 @@
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
-import './global.css'
+import './assets/css/global.css'
 
 createRoot(document.getElementById('root')).render(
-    <div className="">
+    <div className="main">
       <App />
     </div>
 )
