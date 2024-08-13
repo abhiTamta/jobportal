@@ -3,23 +3,31 @@ import App from "../App"
 import Home from "../pages/Home"
 import EmployesLogin from "../pages/employes/employes_login"
 import EmployesRegistors from "../pages/employes/employes_registors"
+import EmployeLayout from "../routers/EmployeLayout"
 
-const pageRouter  = createBrowserRouter([
+const pageRouter = createBrowserRouter([
   {
     path: "/",
-    element : <App />,
-    children : [
+    element: <App />,
+    children: [
       {
-        path : "",
-        element : <Home />
+        path: "",
+        element: <Home />
       },
+
+    ]
+  },
+  {
+    path: "employe/login",
+    element: <EmployeLayout />,
+    children: [
       {
-        path: "employe/login",
-        element : <EmployesLogin />
+        path: "",
+        element: <EmployesLogin />
       },
       {
         path: "employe/registor",
-        element : <EmployesRegistors />
+        element: <EmployesRegistors />
       }
     ]
   }
