@@ -1,7 +1,11 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 
 const EmployesLogin = () => {
+  const navigate = useNavigate();
+  function registorHandler() {
+    navigate("/user/registor")
+  }
   return (
     <div className="py-10 px-5 relative">
       <div className="container mx-auto flex justify-center items-center flex-col gap-10 md:flex-row md:gap-0">
@@ -10,7 +14,7 @@ const EmployesLogin = () => {
             <img src="./../images/login_clipart.png" alt="" />
           </div>
           <div className="registerBtn mx-auto text-center">
-            <button type="button" className="rounded-md border border-solid border-blue-700 text-blue-700 py-3 px-5 hover:bg-blue-500 hover:text-white">Register for Free</button>
+            <button onClick={registorHandler} type="button" className="rounded-md border border-solid border-blue-700 text-blue-700 py-3 px-5 hover:bg-blue-500 hover:text-white">Register for Free</button>
           </div>
         </div>
         <div className="loginForm w-full order-1 p-5 bg-white shadow-lg rounded-md md:order-2 lg:w-4/12 lg:p-16 ">

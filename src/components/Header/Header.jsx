@@ -1,14 +1,10 @@
 import { CiMenuFries } from "react-icons/ci";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Logo from "./Logo";
 import Navbar from "./NavBar/Navbar";
 import Searchbar from "./Searchbar/Searchbar";
 
 const Header = () => {
-  const navigate = useNavigate();
-  function loginHandlers() {
-    navigate("employe/login");
-  }
   return (
     <header className="bg-white py-4 px-5 h-16 shadow-md">
       <div className="container mx-auto flex justify-between">
@@ -17,19 +13,19 @@ const Header = () => {
         <Searchbar />
         <div className="hidden items-center gap-5 lg:flex">
           <div className="flex gap-3">
-            <button
-              onClick={loginHandlers}
+            <Link
+              to={"/user/login"}
               className="border border-blue-500 text-blue-500 rounded-md px-5 py-1 font-bold hover:bg-slate-100"
-              type="button"
             >
               Login
-            </button>
-            <button
+            </Link>
+            <Link
+              to={"/user/registor"}
               className="border rounded-md px-5 py-1 bg-orange-700 text-white font-bold hover:bg-orange-500"
               type="button"
             >
               Register
-            </button>
+            </Link>
           </div>
           <div className="">For Employers</div>
         </div>
