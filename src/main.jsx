@@ -4,7 +4,7 @@ import { RouterProvider } from 'react-router-dom'
 import pageRouter from "./routers"
 
 createRoot(document.getElementById('root')).render(
-  <div className="w-screen relative">
+  <div className="w-full">
     <RouterProvider router={pageRouter} />
   </div>
 )
