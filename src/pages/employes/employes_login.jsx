@@ -7,9 +7,9 @@ const EmployesLogin = () => {
     navigate("/user/registor")
   }
   return (
-    <div className="py-10 px-5 relative">
-      <div className="container mx-auto flex justify-center items-center flex-col gap-10 md:flex-row md:gap-0">
-        <div className="w-full order-2 rounded-md overflow-auto bg-white shadow-md p-5 md:order-1 lg:w-4/12">
+    <div className="py-16">
+      <div className="flex w-8/12 mx-auto bg-blue-950">
+        <div className="w-6/12 bg-white p-10">
           <div className="images">
             <img src="./../images/login_clipart.png" alt="" />
           </div>
@@ -17,25 +17,25 @@ const EmployesLogin = () => {
             <button onClick={registorHandler} type="button" className="rounded-md border border-solid border-blue-700 text-blue-700 py-3 px-5 hover:bg-blue-500 hover:text-white">Register for Free</button>
           </div>
         </div>
-        <div className="loginForm w-full order-1 p-5 bg-white shadow-lg rounded-md md:order-2 lg:w-4/12 lg:p-16 ">
+        <div className="w-6/12 p-14 text-white">
           <h2 className="text-2xl font-bold mb-5">Login</h2>
           <form method="post">
-            <div className="w-full flex flex-col mb-3">
-              <label className="text-sm" htmlFor="username">Email ID / Username</label>
-              <input className="border w-full border-solid border-blue-700 py-2 px-5 rounded-md" type="text" name="username" id="username" />
+            <div className="w-full flex flex-col mb-5">
+              <label className="text-sm mb-2" htmlFor="username">Email ID / Username</label>
+              <input className="p-3 outline-none text-black rounded-md" type="text" name="username" id="username" />
             </div>
-            <div className="w-full flex flex-col mb-3">
-              <label className="text-sm" htmlFor="password">Password</label>
-              <input className="border w-full border-solid border-blue-700 py-2 px-5 rounded-md" type="password" name="password" id="password" />
+            <div className="w-full flex flex-col mb-5">
+              <label className="text-sm mb-2" htmlFor="password">Password</label>
+              <input className="p-3 outline-none text-black rounded-md" type="password" name="password" id="password" />
             </div>
-            <div className="w-full text-right text-xs text-blue-600 mb-3">
+            <div className="w-full text-right text-sm mb-3 text-blue-500 hover:text-white">
               <Link href="#">Forgot Password?</Link>
             </div>
             <div className="w-full text-center mb-4">
-              <button className="py-2 bg-blue-700 w-full rounded-lg font-bold text-white hover:bg-blue-500" type="submit">Login</button>
+              <button className="py-2 w-full rounded-lg font-bold bg-orange-800 hover:bg-orange-500" type="submit">Login</button>
             </div>
             <div className="loginOtpBtn text-center">
-              <button className="text-sm text-blue-600" type="button">Use OTP to Login</button>
+              <button className="text-sm" type="button">Use OTP to Login</button>
             </div>
             <div className="w-full text-center py-8">
               <hr />

@@ -1,10 +1,12 @@
+import registorStyle from "../../assets/css/Registor.module.css"
+
 const EmployesRegistors = () => {
   return (
-    <div className="py-10 px-5 relative">
-      <div className="bg-white p-10 rounded-lg lg:w-8/12">
+    <div className={registorStyle.userRegistorSection}>
+      <div className={`${registorStyle.wapper} lg:w-8/12`}>
         <div className="title">
-          <div className="font-blod text-2xl">Create your Naukri profile</div>
-          <div className="text-sm">Search & apply to jobs from India's No.1 Job Site</div>
+          <h1>Create your Naukri profile</h1>
+          <h5>Search & apply to jobs from India's No.1 Job Site</h5>
         </div>
         <form method="post">
           <div className="">

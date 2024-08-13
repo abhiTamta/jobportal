@@ -1,0 +1,20 @@
+.userRegistorSection {
+    padding: 60px 0;
+    position: relative;
+}
+
+.userRegistorSection .wapper {
+    margin: auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.userRegistorSection .wapper .title{
+    width: 100%;
+    position: relative;
+}
+
+.userRegistorSection .wapper .title h1{
+    font-size: 32px;
+}
