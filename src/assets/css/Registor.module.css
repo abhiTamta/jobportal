@@ -12,9 +12,34 @@
 
 .userRegistorSection .wapper .title{
     width: 100%;
+    margin-bottom: 20px;
     position: relative;
 }
 
 .userRegistorSection .wapper .title h1{
-    font-size: 32px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.userRegistorSection .wapper .formControls {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.userRegistorSection .wapper .formControls label {
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.userRegistorSection .wapper .formControls input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid blue;
+    border-radius: 10px;
+} 
+
+.userRegistorSection .wapper .formControls input:focus {
+    outline: none;
 }
