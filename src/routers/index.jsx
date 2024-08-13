@@ -18,16 +18,29 @@ const pageRouter = createBrowserRouter([
     ]
   },
   {
-    path: "employe/login",
+    path: "/user",
     element: <EmployeLayout />,
     children: [
       {
-        path: "",
+        path: "login",
         element: <EmployesLogin />
       },
       {
-        path: "employe/registor",
+        path: "registor",
         element: <EmployesRegistors />
+      }
+    ]
+  },
+  {
+    path : "/recruit",
+    children : [
+      {
+        path : "login",
+        element : <h1>Login</h1>
+      },
+      {
+        path : "registor",
+        element : <h1>Registor</h1>
       }
     ]
   }
