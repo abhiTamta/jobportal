@@ -42,22 +42,22 @@ const EmployesRegistors = () => {
 
             <Flex vertical gap="middle">
               <Radio.Group defaultValue="" className='flex gap-5'>
-                <Radio.Button value="a" className='h-auto rounded-none leading-none font-normal p-0 m-0 border-none bg-gray-300 border-gray-300'>
-                  <div className="flex items-center justify-between">
+                <Radio.Button value="a" className='h-auto rounded-lg leading-none font-normal p-5 m-0 border-2'>
+                  <div className="flex items-center gap-4 justify-between">
                     <div className="">
-                      <h5>I'm experienced</h5>
-                      <p>I have work experience (excluding internships)</p>
+                      <h5 className='font-bold mb-1 text-2xl'>I'm experienced</h5>
+                      <p className='font-normal'>I have work experience (excluding internships)</p>
                     </div>
-                    <div className="w-14 p-2">
+                    <div className="w-16 p-2">
                       <img src={experiencedIcon} alt="" />
                     </div>
                   </div>
                 </Radio.Button>
-                <Radio.Button value="b" className='h-auto rounded-none leading-none font-normal p-0 m-0 border-none bg-gray-300 border-gray-300'>
-                  <div className="flex items-center justify-between">
+                <Radio.Button value="b" className='h-auto rounded-lg leading-none font-normal p-5 m-0 border-2'>
+                  <div className="flex items-center gap-4 justify-between">
                     <div className="">
-                      <h5>I'm a fresher</h5>
-                      <p>I am a student/ Haven't worked after graduation</p>
+                      <h5 className='font-bold mb-1 text-2xl'>I'm a fresher</h5>
+                      <p className='font-normal'>I am a student/ Haven't worked after graduation</p>
                     </div>
                     <div className="w-14 p-2">
                       <img src={fresherIcon} alt="" />
