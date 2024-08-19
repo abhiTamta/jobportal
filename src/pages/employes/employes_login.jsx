@@ -21,8 +21,8 @@ const EmployesLogin = () => {
           <h2 className="text-2xl font-bold mb-5">Login</h2>
           <form method="post">
             <div className="w-full flex flex-col mb-5">
-              <label className="text-sm mb-2" htmlFor="username">Email ID / Username</label>
-              <input className="p-3 outline-none text-black rounded-md" type="text" name="username" id="username" />
+              <label className="text-sm mb-2" htmlFor="email">Email ID</label>
+              <input className="p-3 outline-none text-black rounded-md" type="email" name="email" id="email" />
             </div>
             <div className="w-full flex flex-col mb-5">
               <label className="text-sm mb-2" htmlFor="password">Password</label>
