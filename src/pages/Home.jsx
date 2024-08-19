@@ -1,3 +1,4 @@
+import { Flex, Form, Select } from 'antd'
 import React from 'react'
 import { FaSearch } from 'react-icons/fa'
 
@@ -9,15 +10,13 @@ const Home = () => {
           <h1 className='text-5xl font-bold mb-3'>Find your dream job now</h1>
           <h4 className='text-xl'>5 lakh+ jobs for you to explore</h4>
         </div>
-        <div className="jobSearchSection w-10/12 mx-auto p-4 rounded-3xl bg-white shadow-lg">
+        <div className="jobSearchSection w-8/12 mx-auto p-6 rounded-full bg-white shadow-lg">
           <form action="" method='post'>
-            <FaSearch />
-            <input type='text' name='' placeholder='Enter skill / ' id='' />
-            <select name="" id="">
-              <option value="1">1</option>
-            </select>
-            <input type="text" name='' placeholder='' id='' />
-            <button type="submit">Search</button>
+            <Flex align='center' justify='space-between'>
+              <Form>
+                
+              </Form>
+            </Flex>
           </form>
         </div>
       </div>
