@@ -1,5 +1,5 @@
-import { Button, Checkbox, Form, Input, InputNumber, Select } from "antd"
-
+import { Button, Checkbox, Form, Input, Radio, Select } from "antd"
+import registrationStyle from '../../assets/css/Registor.module.css'
 const EmployesRegistors = () => {
   const [form] = Form.useForm();
   const onFinish = (values) => {
@@ -7,13 +7,13 @@ const EmployesRegistors = () => {
   };
   return (
     <div className='container mx-auto py-10'>
-      <div className="w-2/3 mx-auto bg-white shadow-lg rounded-lg p-10">
+      <div className="w-full rounded-none shadow-lg bg-white p-5 mx-auto lg:rounded-xl lg:p-10 lg:w-8/12">
         <div className="mb-5">
           <h1 className="font-bold text-[24px]">Create your job profile</h1>
           <h5 className="text-[14px]">Search & apply to jobs from India's No.1 Job Site</h5>
         </div>
 
-        <div className="registrationForm">
+        <div className={registrationStyle.registrationForm}>
           <Form onFinish={onFinish} form={form} layout="vertical" name="register">
             <Form.Item
               name="fullname"
@@ -26,7 +26,7 @@ const EmployesRegistors = () => {
                 },
               ]}
             >
-              <Input />
+              <Input className="h-10" placeholder="" />
             </Form.Item>
             <Form.Item
               name="email"
@@ -41,9 +41,9 @@ const EmployesRegistors = () => {
                   message: 'Please input your E-mail!',
                 },
               ]}
-              
+
             >
-              <Input />
+              <Input className="h-10" placeholder="" />
             </Form.Item>
 
             <Form.Item
@@ -55,16 +55,16 @@ const EmployesRegistors = () => {
                   message: 'Please input your password!',
                 },
               ]}
-              
+
             >
-              <Input.Password />
+              <Input.Password className="h-10" placeholder="" />
             </Form.Item>
 
             <Form.Item
               name="confirm"
               label="Confirm Password"
               dependencies={['password']}
-              
+
               rules={[
                 {
                   required: true,
@@ -80,11 +80,8 @@ const EmployesRegistors = () => {
                 }),
               ]}
             >
-              <Input.Password />
+              <Input.Password className="h-10" placeholder="" />
             </Form.Item>
-
-
-
             <Form.Item
               name="phone"
               label="Phone Number"
@@ -95,12 +92,19 @@ const EmployesRegistors = () => {
                 },
               ]}
             >
-              <Input />
+              <Input className="h-10" placeholder="" />
             </Form.Item>
 
-            <Form.Item>
-              <Select>
+            <Form.Item name="gender" label="Gender" rules={[
+              {
+                required: true,
+                message: "Gender is required"
+              }
+            ]}>
+              <Select placeholder="Select the your gender.">
                 <Select.Option value="male">Male</Select.Option>
+                <Select.Option value="female">FeMale</Select.Option>
+                <Select.Option value="other">Other</Select.Option>
               </Select>
             </Form.Item>
 

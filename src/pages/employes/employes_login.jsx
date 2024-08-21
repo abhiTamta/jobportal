@@ -8,8 +8,8 @@ const EmployesLogin = () => {
   }
   return (
     <div className="py-16">
-      <div className="flex w-8/12 mx-auto bg-blue-950">
-        <div className="w-6/12 bg-white p-10">
+      <div className="flex flex-col w-full mx-auto bg-blue-950 md:flex-row lg:w-10/12 xl:w-8/12">
+        <div className="w-full order-2 bg-white p-10 md:order-1 lg:w-6/12">
           <div className="images">
             <img src="./../images/login_clipart.png" alt="" />
           </div>
@@ -17,7 +17,7 @@ const EmployesLogin = () => {
             <button onClick={registorHandler} type="button" className="rounded-md border border-solid border-blue-700 text-blue-700 py-3 px-5 hover:bg-blue-500 hover:text-white">Register for Free</button>
           </div>
         </div>
-        <div className="w-6/12 p-14 text-white">
+        <div className="w-full order-1 p-14 text-white md:order-2 lg:w-6/12">
           <h2 className="text-2xl font-bold mb-5">Login</h2>
           <form method="post">
             <div className="w-full flex flex-col mb-5">
