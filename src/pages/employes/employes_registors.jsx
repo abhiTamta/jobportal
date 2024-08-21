@@ -19,7 +19,7 @@ const EmployesRegistors = () => {
           headers: {
             "content-type": "application/json"
           },
-          body: values
+          body: JSON.stringify(values)
         })
       } catch (error) {
         console.error("ERROR ", error)
