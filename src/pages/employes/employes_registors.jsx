@@ -1,9 +1,42 @@
-import { Button, Checkbox, Form, Input, Radio, Select } from "antd"
+import { Button, Checkbox, Form, Upload, Input, Radio, Select } from "antd"
 import registrationStyle from '../../assets/css/Registor.module.css'
 const EmployesRegistors = () => {
   const [form] = Form.useForm();
+
+  const normFile = (e) => {
+    console.log('Upload event:', e);
+    if (Array.isArray(e)) {
+      return e;
+    }
+    return e?.fileList;
+  };
+
   const onFinish = (values) => {
     console.log('Received values of form: ', values);
+    const uploadedFile = values.upload ? values.upload[0] : null;
+    console.log(uploadedFile)
+    // if (uploadedFile) {
+    //   console.log('File to be uploaded:', uploadedFile);
+
+    //   // Here you can handle the file upload, for example:
+    //   const formData = new FormData();
+    //   formData.append('file', uploadedFile.originFileObj);
+
+    //   // Send the file to your server
+    //   fetch('/your-upload-endpoint', {
+    //     method: 'POST',
+    //     body: formData,
+    //   })
+    //     .then(response => response.json())
+    //     .then(data => {
+    //       console.log('File upload success:', data);
+    //     })
+    //     .catch(error => {
+    //       console.error('File upload error:', error);
+    //     });
+    // } else {
+    //   console.error('No file uploaded');
+    // }
   };
   return (
     <div className='container mx-auto py-10'>
@@ -108,6 +141,24 @@ const EmployesRegistors = () => {
               </Select>
             </Form.Item>
 
+
+            <Form.Item name="radio-group" label="Radio.Group">
+              <Radio.Group>
+                <Radio.Button value="a">item 1</Radio.Button>
+                <Radio.Button value="b">item 2</Radio.Button>
+              </Radio.Group>
+            </Form.Item>
+
+            <Form.Item
+              name="upload"
+              label="Upload"
+              valuePropName="fileList"
+              getValueFromEvent={normFile}
+            >
+              <Upload name="logo" maxCount={1} beforeUpload={() => false}>
+                <Button>Click to upload</Button>
+              </Upload>
+            </Form.Item>
             <Form.Item
               name="agreement"
               valuePropName="checked"
