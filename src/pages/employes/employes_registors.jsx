@@ -1,10 +1,10 @@
 import { Button, Checkbox, Form, Upload, Input, Radio, Select } from "antd"
 import registrationStyle from '../../assets/css/Registor.module.css'
+import { useEffect } from "react";
 const EmployesRegistors = () => {
   const [form] = Form.useForm();
 
   const normFile = (e) => {
-    console.log('Upload event:', e);
     if (Array.isArray(e)) {
       return e;
     }
@@ -12,31 +12,19 @@ const EmployesRegistors = () => {
   };
 
   const onFinish = (values) => {
-    console.log('Received values of form: ', values);
-    const uploadedFile = values.upload ? values.upload[0] : null;
-    console.log(uploadedFile)
-    // if (uploadedFile) {
-    //   console.log('File to be uploaded:', uploadedFile);
-
-    //   // Here you can handle the file upload, for example:
-    //   const formData = new FormData();
-    //   formData.append('file', uploadedFile.originFileObj);
-
-    //   // Send the file to your server
-    //   fetch('/your-upload-endpoint', {
-    //     method: 'POST',
-    //     body: formData,
-    //   })
-    //     .then(response => response.json())
-    //     .then(data => {
-    //       console.log('File upload success:', data);
-    //     })
-    //     .catch(error => {
-    //       console.error('File upload error:', error);
-    //     });
-    // } else {
-    //   console.error('No file uploaded');
-    // }
+    (async () => {
+      try {
+        await fetch("http://localhost:8080/api/employee/registration", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json"
+          },
+          body: values
+        })
+      } catch (error) {
+        console.error("ERROR ", error)
+      }
+    })()
   };
   return (
     <div className='container mx-auto py-10'>
@@ -116,7 +104,7 @@ const EmployesRegistors = () => {
               <Input.Password className="h-10" placeholder="" />
             </Form.Item>
             <Form.Item
-              name="phone"
+              name="mobileNumber"
               label="Phone Number"
               rules={[
                 {
@@ -142,10 +130,15 @@ const EmployesRegistors = () => {
             </Form.Item>
 
 
-            <Form.Item name="radio-group" label="Radio.Group">
+            <Form.Item name="workStatus" label="Work status" rules={[
+              {
+                required: true,
+                message: "Work status is requied"
+              }
+            ]}>
               <Radio.Group>
-                <Radio.Button value="a">item 1</Radio.Button>
-                <Radio.Button value="b">item 2</Radio.Button>
+                <Radio.Button value="experienced">I'm experienced</Radio.Button>
+                <Radio.Button value="fresher">I'm a fresher</Radio.Button>
               </Radio.Group>
             </Form.Item>
 
