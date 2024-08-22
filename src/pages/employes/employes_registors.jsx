@@ -1,9 +1,9 @@
-import { Button, Checkbox, Form, Upload, Input, Radio, Select } from "antd"
+import { Button, Checkbox, Form, Upload, Input, Radio, Select, message } from "antd"
 import registrationStyle from '../../assets/css/Registor.module.css'
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 const EmployesRegistors = () => {
   const [form] = Form.useForm();
-
   const normFile = (e) => {
     if (Array.isArray(e)) {
       return e;
@@ -11,20 +11,15 @@ const EmployesRegistors = () => {
     return e?.fileList;
   };
 
-  const onFinish = (values) => {
-    (async () => {
-      try {
-        await fetch("http://localhost:8080/api/employee/registration", {
-          method: "POST",
-          headers: {
-            "content-type": "application/json"
-          },
-          body: JSON.stringify(values)
-        })
-      } catch (error) {
-        console.error("ERROR ", error)
+  const onFinish = async (values) => {
+    try {
+      const response = await axios.post("http://localhost:8080/api/employee/registration", values);
+      if (response.status === 200) {
+        message.success('Employee registered successfully!');
       }
-    })()
+    } catch (error) {
+      message.error(error.response.data.message)
+    }
   };
   return (
     <div className='container mx-auto py-10'>
@@ -81,28 +76,7 @@ const EmployesRegistors = () => {
               <Input.Password className="h-10" placeholder="" />
             </Form.Item>
 
-            <Form.Item
-              name="confirm"
-              label="Confirm Password"
-              dependencies={['password']}
 
-              rules={[
-                {
-                  required: true,
-                  message: 'Please confirm your password!',
-                },
-                ({ getFieldValue }) => ({
-                  validator(_, value) {
-                    if (!value || getFieldValue('password') === value) {
-                      return Promise.resolve();
-                    }
-                    return Promise.reject(new Error('The new password that you entered do not match!'));
-                  },
-                }),
-              ]}
-            >
-              <Input.Password className="h-10" placeholder="" />
-            </Form.Item>
             <Form.Item
               name="mobileNumber"
               label="Phone Number"
