@@ -15,7 +15,7 @@ const Header = () => {
     setOpen(false);
   };
   return (
-    <header className="bg-white py-4 px-5 h-16 shadow-md">
+    <header className="bg-white py-2 px-5 shadow-md">
       <div className="container mx-auto flex justify-between gap-5">
         <Logo />
         <NavbarD />
