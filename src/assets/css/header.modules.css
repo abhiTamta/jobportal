@@ -1,0 +1,17 @@
+.mainMenu {
+    flex-grow: 1;
+  position: relative;
+  font-size: 14px;
+}
+
+.mainMenu .ant-menu .ant-menu-title-content {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+}
+
+.ant-menu-light.ant-menu-horizontal >.ant-menu-item:hover::after, 
+.ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-item:hover::after, 
+.ant-menu-light.ant-menu-horizontal >.ant-menu-submenu:hover::after, 
+.ant-menu-light>.ant-menu.ant-menu-horizontal >.ant-menu-submenu:hover::after {
+    border: none;
+}

@@ -18,7 +18,7 @@ const Home = () => {
                 <Form.Item name={"searchSkill"} className='mb-0'>
                   <Input className='w-full' type="text" placeholder='Enter skills / designations / companies' />
                 </Form.Item>
-
+                
                 <Form.Item name={"searchexperience"} className='mb-0 '>
                   <Select placeholder="Select experience" className='border-none'>
                     <Select.Option>asfas</Select.Option>
@@ -62,13 +62,13 @@ const Home = () => {
         </div>
       </section>
       <section className='container mx-auto py-16'>
-          <h2>Top companies hiring now</h2>
+        <h2>Top companies hiring now</h2>
       </section>
       <section className='container mx-auto py-16'>
-          <h2>Featured companies actively hiring</h2>
+        <h2>Featured companies actively hiring</h2>
       </section>
       <section className='container mx-auto py-16'>
-          <h2>Sponsored companies</h2>
+        <h2>Sponsored companies</h2>
       </section>
     </>
   )

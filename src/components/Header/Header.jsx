@@ -19,11 +19,9 @@ const Header = () => {
       <div className="container mx-auto flex justify-between gap-5">
         <Logo />
         <NavbarD />
+        
         <div className="font-bold flex lg:hidden">
-          <Button
-            className="w-auto h-auto p-0 border-none"
-            onClick={showDrawer}
-          >
+          <Button className="w-auto h-auto p-0 border-none" onClick={showDrawer}>
             <CiMenuFries size={25} />
           </Button>
         </div>
