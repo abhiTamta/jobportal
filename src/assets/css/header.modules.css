@@ -8,36 +8,85 @@
   font-size: 16px;
   font-family: "Roboto", sans-serif;
 }
+:where(.css-dev-only-do-not-override-1c0na6j).ant-menu-horizontal {
+  border-bottom: 0;
+}
+.ant-menu-light.ant-menu-horizontal>.ant-menu-item:hover::after,
+.ant-menu-light>.ant-menu.ant-menu-horizontal>.ant-menu-item:hover::after,
+.ant-menu-light.ant-menu-horizontal>.ant-menu-submenu:hover::after,
+.ant-menu-light>.ant-menu.ant-menu-horizontal>.ant-menu-submenu:hover::after,
+.ant-menu-light.ant-menu-horizontal>.ant-menu-item-active::after,
+.ant-menu-light>.ant-menu.ant-menu-horizontal>.ant-menu-item-active::after,
+.ant-menu-light.ant-menu-horizontal>.ant-menu-submenu-active::after,
+.ant-menu-light>.ant-menu.ant-menu-horizontal>.ant-menu-submenu-active::after,
+.ant-menu-light.ant-menu-horizontal>.ant-menu-item-open::after,
+.ant-menu-light>.ant-menu.ant-menu-horizontal>.ant-menu-item-open::after,
+.ant-menu-light.ant-menu-horizontal>.ant-menu-submenu-open::after,
+.ant-menu-light>.ant-menu.ant-menu-horizontal>.ant-menu-submenu-open::after {
+  border-bottom: 0px solid white;
+}
 
-:where(.css-dev-only-do-not-override-1c0na6j).ant-menu-light.ant-menu-horizontal
-  > .ant-menu-item:hover::after,
-:where(.css-dev-only-do-not-override-1c0na6j).ant-menu-light
-  > .ant-menu.ant-menu-horizontal
-  > .ant-menu-item:hover::after,
-:where(.css-dev-only-do-not-override-1c0na6j).ant-menu-light.ant-menu-horizontal
-  > .ant-menu-submenu:hover::after,
-:where(.css-dev-only-do-not-override-1c0na6j).ant-menu-light
-  > .ant-menu.ant-menu-horizontal
-  > .ant-menu-submenu:hover::after,
-:where(.css-dev-only-do-not-override-1c0na6j).ant-menu-light.ant-menu-horizontal
-  > .ant-menu-item-active::after,
-:where(.css-dev-only-do-not-override-1c0na6j).ant-menu-light
-  > .ant-menu.ant-menu-horizontal
-  > .ant-menu-item-active::after,
-:where(.css-dev-only-do-not-override-1c0na6j).ant-menu-light.ant-menu-horizontal
-  > .ant-menu-submenu-active::after,
-:where(.css-dev-only-do-not-override-1c0na6j).ant-menu-light
-  > .ant-menu.ant-menu-horizontal
-  > .ant-menu-submenu-active::after,
-:where(.css-dev-only-do-not-override-1c0na6j).ant-menu-light.ant-menu-horizontal
-  > .ant-menu-item-open::after,
-:where(.css-dev-only-do-not-override-1c0na6j).ant-menu-light
-  > .ant-menu.ant-menu-horizontal
-  > .ant-menu-item-open::after,
-:where(.css-dev-only-do-not-override-1c0na6j).ant-menu-light.ant-menu-horizontal
-  > .ant-menu-submenu-open::after,
-:where(.css-dev-only-do-not-override-1c0na6j).ant-menu-light
-  > .ant-menu.ant-menu-horizontal
-  > .ant-menu-submenu-open::after {
-  border-bottom: none;
+.headerButtonGroup {
+  position: relative;
+}
+
+.headerButtonGroup .loginBtn {
+  overflow: hidden;
+  padding: 4px 20px;
+  border-radius: 16px;
+  border: 1px solid rgb(0, 60, 150);
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+  color: rgb(0, 60, 150);
+}
+
+.headerButtonGroup .loginBtn:hover {
+  color: #fff;
+}
+
+.headerButtonGroup .loginBtn:hover::after {
+  width: 100%;
+}
+
+.headerButtonGroup .loginBtn::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(0, 60, 150);
+  position: absolute;
+  z-index: -1;
+  transition: all 0.5s ease-in-out;
+}
+
+.headerButtonGroup .registorBtn {
+  padding: 8px 20px;
+  border-radius: 16px;
+  color: #fff;
+  background: rgb(223, 63, 0);
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+.headerButtonGroup .registorBtn:hover {
+  background: rgb(241, 125, 79);
+}
+
+ul.ant-menu.ant-menu-sub.ant-menu-vertical {
+  display: flex;
+}
+
+.ant-menu-light .ant-menu-item-group-title,
+.ant-menu-light>.ant-menu .ant-menu-item-group-title {
+  color: #000;
+  font-weight: bold;
+}
+
+.headerButtonGroup .lineVr {
+  width: 2px;
+  height: 100%;
+  background: #000;
 }

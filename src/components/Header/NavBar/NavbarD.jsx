@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, Space } from "antd"
+import { Dropdown, Menu, Space } from "antd"
 import { Link, useNavigate } from "react-router-dom";
 import items from "./MenuItem";
 import "../../../assets/css/header.modules.css"
@@ -15,14 +15,28 @@ const NavbarD = () => {
   };
 
   return (
-    <div className="flex flex-grow justify-between items-center">
+    <div className="hidden flex-grow justify-between items-center lg:flex">
       <div className="mainMenu">
         <Menu onClick={onClick} selectedKeys={[current]} mode="horizontal" items={items} />
       </div>
-      <div className="">
+      <div className="headerButtonGroup">
         <Space size={"large"}>
-          <Link className="" to={"/user/login"}>Login</Link>
-          <Link className="" to={"/user/registor"} type="button">Register</Link>
+          <Space size={"middle"}>
+            <Link className="loginBtn" to={"/user/login"}>Login</Link>
+            <Link className="registorBtn" to={"/user/registor"} type="button">Register</Link>
+          </Space>
+          <Space>
+            <div className="bg-slate-700 w-[1px] h-6"></div>
+          </Space>
+          <Space>
+            <Dropdown menu={{ items }}>
+              <a onClick={(e) => e.preventDefault()}>
+                <Space>
+                  For employers
+                </Space>
+              </a>
+            </Dropdown>
+          </Space>
         </Space>
       </div>
     </div>
