@@ -8,9 +8,11 @@
   font-size: 16px;
   font-family: "Roboto", sans-serif;
 }
+
 :where(.css-dev-only-do-not-override-1c0na6j).ant-menu-horizontal {
   border-bottom: 0;
 }
+
 .ant-menu-light.ant-menu-horizontal>.ant-menu-item:hover::after,
 .ant-menu-light>.ant-menu.ant-menu-horizontal>.ant-menu-item:hover::after,
 .ant-menu-light.ant-menu-horizontal>.ant-menu-submenu:hover::after,
@@ -89,4 +91,24 @@ ul.ant-menu.ant-menu-sub.ant-menu-vertical {
   width: 2px;
   height: 100%;
   background: #000;
+}
+
+.ant-menu-light.ant-menu-root.ant-menu-inline,
+.ant-menu-light>.ant-menu.ant-menu-root.ant-menu-inline,
+.ant-menu-light.ant-menu-root.ant-menu-vertical,
+.ant-menu-light>.ant-menu.ant-menu-root.ant-menu-vertical {
+  border-inline-end: 0;
+}
+
+/* .ant-menu .ant-menu-submenu,
+.ant-menu .ant-menu-submenu-inline {
+  background: #ef4444;
+} */
+
+:where(.css-dev-only-do-not-override-1c0na6j).ant-menu-inline .ant-menu-item,
+:where(.css-dev-only-do-not-override-1c0na6j).ant-menu-vertical .ant-menu-item,
+:where(.css-dev-only-do-not-override-1c0na6j).ant-menu-inline .ant-menu-submenu-title,
+:where(.css-dev-only-do-not-override-1c0na6j).ant-menu-vertical .ant-menu-submenu-title {
+  /* margin-inline: 0; */
+  /* width: 100%; */
 }
