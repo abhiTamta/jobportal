@@ -4,6 +4,8 @@ import Home from "../pages/Home"
 import EmployesLogin from "../pages/employes/employes_login"
 import EmployesRegistors from "../pages/employes/employes_registors"
 import EmployeLayout from "../routers/EmployeLayout"
+import EmployesForgot from "../pages/employes/employes_forgot"
+import EmployesResetPass from "../pages/employes/employes_resetPass"
 
 const pageRouter = createBrowserRouter([
   {
@@ -28,6 +30,14 @@ const pageRouter = createBrowserRouter([
       {
         path: "registor",
         element: <EmployesRegistors />
+      },
+      {
+        path: "forgot",
+        element: <EmployesForgot />
+      },
+      {
+        path: "resetpassword",
+        element: <EmployesResetPass />
       }
     ]
   },

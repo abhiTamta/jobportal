@@ -1,0 +1,35 @@
+.loginFrom {
+  width: 100%;
+  position: relative;
+}
+
+.loginFrom label {
+  color: #fff !important;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.loginFrom label::after {
+  display: none !important;
+}
+
+.loginFrom label::before {
+  display: none !important;
+}
+
+.loginDivider .ant-divider-inner-text {
+  color: #fff;
+}
+
+.loginDivider::before {
+  background: white;
+}
+
+.loginDivider::after {
+  background: white;
+}
+
+.googleSingBtn {
+    width: 100%;
+    height: 40px;
+}

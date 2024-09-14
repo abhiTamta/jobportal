@@ -1,47 +1,38 @@
-import { Link, useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
+import { TbUserHexagon } from "react-icons/tb";
+import { Button, Divider } from "antd";
+import "../../assets/css/loginFrom.css"
+import { useState } from "react";
+import LoginEmail from "./login_email"
+import LoginMobile from "./login_mobile"
 
 const EmployesLogin = () => {
-  const navigate = useNavigate();
-  function registorHandler() {
-    navigate("/user/registor")
+  const [loginType, setLoginType] = useState(true);
+
+  function loginformHandler(data) {
+    setLoginType(data)
   }
+
   return (
-    <div className="py-16">
-      <div className="flex flex-col w-full mx-auto bg-blue-950 md:flex-row lg:w-10/12 xl:w-8/12">
-        <div className="w-full order-2 bg-white p-10 md:order-1 lg:w-6/12">
+    <div className="container mx-auto px- py-16 md:px-0 lg:px-0">
+      <div className="bg-white mx-auto w-full lg:w-8/12 flex justify-between">
+        
+        <div className="w-full hidden md:flex">
           <div className="images">
             <img src="./../images/login_clipart.png" alt="" />
           </div>
-          <div className="registerBtn mx-auto text-center">
-            <button onClick={registorHandler} type="button" className="rounded-md border border-solid border-blue-700 text-blue-700 py-3 px-5 hover:bg-blue-500 hover:text-white">Register for Free</button>
-          </div>
         </div>
-        <div className="w-full order-1 p-14 text-white md:order-2 lg:w-6/12">
-          <h2 className="text-2xl font-bold mb-5">Login</h2>
-          <form method="post">
-            <div className="w-full flex flex-col mb-5">
-              <label className="text-sm mb-2" htmlFor="email">Email ID</label>
-              <input className="p-3 outline-none text-black rounded-md" type="email" name="email" id="email" />
-            </div>
-            <div className="w-full flex flex-col mb-5">
-              <label className="text-sm mb-2" htmlFor="password">Password</label>
-              <input className="p-3 outline-none text-black rounded-md" type="password" name="password" id="password" />
-            </div>
-            <div className="w-full text-right text-sm mb-3 text-blue-500 hover:text-white">
-              <Link href="#">Forgot Password?</Link>
-            </div>
-            <div className="w-full text-center mb-4">
-              <button className="py-2 w-full rounded-lg font-bold bg-orange-800 hover:bg-orange-500" type="submit">Login</button>
-            </div>
-            <div className="loginOtpBtn text-center">
-              <button className="text-sm" type="button">Use OTP to Login</button>
-            </div>
-            <div className="w-full text-center py-8">
-              <hr />
-            </div>
-            <div className="w-full flex items-center justify-center gap-2"><FcGoogle size={30} />Sign in with Google</div>
-          </form>
+
+        <div className="w-full md:w-8/12 lg:w-10/12 xl:w-7/12 bg-blue-600 p-6">
+          <div className="flex text-white gap-2 items-center mb-4">
+            <TbUserHexagon size={40} />
+            <h2 className="text-2xl font-bold"> Login</h2>
+          </div>
+          <div className="loginFrom">
+            {loginType ? <LoginEmail loginType={loginformHandler} /> : <LoginMobile loginType={loginformHandler} />}
+            <Divider className="loginDivider">Or</Divider>
+            <Button className="googleSingBtn"><FcGoogle size={30} /> Sign in with Google</Button>
+          </div>
         </div>
       </div>
     </div>

@@ -1,9 +1,9 @@
 import { Button, Checkbox, Form, Upload, Input, Radio, Select, message } from "antd"
 import registrationStyle from '../../assets/css/Registor.module.css'
-import { useEffect, useState } from "react";
 import axios from "axios";
 const EmployesRegistors = () => {
   const [form] = Form.useForm();
+
   const normFile = (e) => {
     if (Array.isArray(e)) {
       return e;
@@ -13,10 +13,7 @@ const EmployesRegistors = () => {
 
   const onFinish = async (values) => {
     try {
-      const response = await axios.post("http://localhost:8080/api/employee/registration", values);
-      if (response.status === 200) {
-        message.success('Employee registered successfully!');
-      }
+      console.log(values)
     } catch (error) {
       message.error(error.response.data.message)
     }
