@@ -3,7 +3,7 @@ import { Dropdown, Menu, Space } from "antd"
 import { Link, useNavigate } from "react-router-dom";
 import items from "./MenuItem";
 import "../../../assets/css/header.modules.css"
-
+import DropdownEmployers from "./dropdownEmployers";
 
 const NavbarD = () => {
   const [current, setCurrent] = useState('mail');
@@ -29,13 +29,7 @@ const NavbarD = () => {
             <div className="bg-slate-700 w-[1px] h-6"></div>
           </Space>
           <Space>
-            <Dropdown menu={{ items }}>
-              <a onClick={(e) => e.preventDefault()}>
-                <Space>
-                  For employers
-                </Space>
-              </a>
-            </Dropdown>
+            <DropdownEmployers />
           </Space>
         </Space>
       </div>
