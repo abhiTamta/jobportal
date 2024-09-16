@@ -31,7 +31,7 @@
 .headerButtonGroup {
   position: relative;
 }
-
+/* 
 .headerButtonGroup .loginBtn {
   overflow: hidden;
   padding: 4px 20px;
@@ -75,7 +75,7 @@
 
 .headerButtonGroup .registorBtn:hover {
   background: rgb(241, 125, 79);
-}
+} */
 
 ul.ant-menu.ant-menu-sub.ant-menu-vertical {
   display: flex;

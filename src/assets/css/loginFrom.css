@@ -29,6 +29,10 @@
   background: white;
 }
 
+.loginFrom input::placeholder {
+  color: rgb(101, 101, 101);
+}
+
 .googleSingBtn {
     width: 100%;
     height: 40px;
