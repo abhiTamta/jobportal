@@ -26,6 +26,13 @@ const CeeateCompany = () => {
                             <Form.Item
                                 label="Company Name"
                                 name="companyName"
+                                rules={[
+                                    {
+                                        required : true,
+                                        whitespace : true,
+                                        message : "Please enter the compnay name here."
+                                    }
+                                ]}
                             >
                                 <Input />
                             </Form.Item>
