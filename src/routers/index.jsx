@@ -7,6 +7,7 @@ import EmployeLayout from "../routers/EmployeLayout"
 import EmployesForgot from "../pages/employes/employes_forgot"
 import EmployesResetPass from "../pages/employes/employes_resetPass"
 import CompanyLogin from "../pages/employers/companyLogin"
+import CeeateCompany from "../pages/employers/CeeateCompany"
 
 const pageRouter = createBrowserRouter([
   {
@@ -52,7 +53,7 @@ const pageRouter = createBrowserRouter([
       },
       {
         path : "registor",
-        element : <h1>Registor</h1>
+        element : <CeeateCompany />
       }
     ]
   }

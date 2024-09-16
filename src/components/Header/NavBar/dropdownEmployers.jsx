@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 
 const items = [
     {
+        key: 'Employer Create',
+        label: (<Link to={"/recruit/registor"}>Employer Create</Link>),
+    },
+    {
         key: 'Employer Login',
         label: (<Link to={"/recruit/login"}>Employer Login</Link>),
     },

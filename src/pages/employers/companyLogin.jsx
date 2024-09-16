@@ -1,28 +1,23 @@
-import { FcGoogle } from "react-icons/fc";
 import { TbUserHexagon } from "react-icons/tb";
 import { Button, Checkbox, Divider, Form, Input } from "antd";
 import { IoCheckmarkDoneOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
+
 
 import "../../assets/css/loginFrom.css"
-import { Link } from "react-router-dom";
 
 const CompanyLogin = () => {
     return (
         <div className="container mx-auto px- py-16 md:px-0 lg:px-0">
             <div className="bg-white mx-auto w-full flex justify-between lg:w-10/12 xl:w-8/12 2xl:w-6/12">
-
                 <div className="w-full hidden md:flex flex-col justify-end">
                     <div className="px-10 pt-5">
-                        <h2 className="text-xl font-bold mb-2">New to pixels Jobs?</h2>
-                        <ul>
-                            <li className="flex items-center gap-3 mb-2"><IoCheckmarkDoneOutline /> One click apply using naukri profile.</li>
-                            <li className="flex items-center gap-3 mb-2"><IoCheckmarkDoneOutline /> Get relevant job recommendations.</li>
-                            <li className="flex items-center gap-3 mb-2"><IoCheckmarkDoneOutline /> Showcase profile to top companies and consultants.</li>
-                            <li className="flex items-center gap-3 mb-2"><IoCheckmarkDoneOutline /> Know application status on applied jobs.</li>
-                        </ul>
+                        <h2 className="text-5xl text-center font-bold mb-3 text-gray-700">Hire talent with Pixels Jobs!</h2>
+                        <h5 className="text-xl text-center mb-2 text-gray-500">Find, engage, and hire talent on India’s leading recruitment platform</h5>
+                        <p className="text-center text-gray-500">Job Posting, Resdex, Assisted Hiring</p>
                     </div>
                     <div className="images mx-auto w-10/12">
-                        <img src="./../images/login_clipart.png" alt="" />
+                        <img src="./../images/company_login_clipart.png" alt="" />
                     </div>
                 </div>
 
@@ -68,13 +63,15 @@ const CompanyLogin = () => {
                                 <Link to="/user/forgot" className="text-white hover:text-yellow-500">Forgot Password</Link>
                             </div>
                             <Form.Item>
-                                <Button className="w-full h-9 text-lg" htmlType="submit">Submit</Button>
+                                <Button className="w-full h-9 text-lg font-semibold" htmlType="submit">Submit</Button>
                             </Form.Item>
-                           
+
                         </Form>
-                        <Divider className="loginDivider">Or</Divider>
-                        <p>Don’t have a registered email ID?</p>
-                        <Button className="googleSingBtn">Create account</Button>
+                        <div className="w-full">
+                            <Divider className="loginDivider">Or</Divider>
+                            <p className="text-white text-sm mx-auto mb-2 text-center">Don’t have a registered email ID?</p>
+                            <Link to={"/recruit/registor"} className="bg-white text-md font-semibold flex rounded-lg justify-center py-2 hover:bg-red-600 hover:text-white">Create account</Link>
+                        </div>
                     </div>
                 </div>
             </div>
