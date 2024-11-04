@@ -5,8 +5,8 @@ import { LuMapPin } from "react-icons/lu";
 const JobListingCard = () => {
   return (
     <>
-      <Row gutter={16}>
-        <Col span={6} className="mb-3">
+      <Row gutter={15}>
+        <Col span={6} className="mb-5">
           <Card hoverable>
             <div className="flex justify-between mb-3">
               <div className="w-16 rounded-lg overflow-hidden"><img src="images/dtcc.gif" alt="" /></div>
@@ -29,7 +29,7 @@ const JobListingCard = () => {
             </div>
           </Card>
         </Col>
-        <Col span={6} className="mb-3">
+        <Col span={6} className="mb-5">
           <Card hoverable>
             <div className="flex justify-between mb-3">
               <div className="w-16 rounded-lg overflow-hidden"><img src="images/dtcc.gif" alt="" /></div>
@@ -52,7 +52,7 @@ const JobListingCard = () => {
             </div>
           </Card>
         </Col>
-        <Col span={6} className="mb-3">
+        <Col span={6} className="mb-5">
           <Card hoverable>
             <div className="flex justify-between mb-3">
               <div className="w-16 rounded-lg overflow-hidden"><img src="images/dtcc.gif" alt="" /></div>
@@ -75,7 +75,7 @@ const JobListingCard = () => {
             </div>
           </Card>
         </Col>
-        <Col span={6} className="mb-3">
+        <Col span={6} className="mb-5">
           <Card hoverable>
             <div className="flex justify-between mb-3">
               <div className="w-16 rounded-lg overflow-hidden"><img src="images/dtcc.gif" alt="" /></div>
@@ -98,7 +98,7 @@ const JobListingCard = () => {
             </div>
           </Card>
         </Col>
-        <Col span={6} className="mb-3">
+        <Col span={6} className="mb-5">
           <Card hoverable>
             <div className="flex justify-between mb-3">
               <div className="w-16 rounded-lg overflow-hidden"><img src="images/dtcc.gif" alt="" /></div>

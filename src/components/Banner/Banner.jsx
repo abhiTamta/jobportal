@@ -14,11 +14,11 @@ const Banner = () => {
           <Form method='post'>
             <Flex justify='space-between' align='center' wrap="wrap" gap={20}>
               <Form.Item name={"searchSkill"} className='m-0 flex-grow'>
-                <Input type="text" className='p-3' placeholder='Enter skills / designations / companies' />
+                <Input type="text" className='p-3 rounded-none border-none' placeholder='Enter skills / designations / companies' />
               </Form.Item>
 
               <Form.Item name={"searchexperience"} className='m-0 flex-grow'>
-                <Select placeholder="Select experience" className='h-12'>
+                <Select placeholder="Select experience" className='h-12 rounded-none border-none'>
                   <Select.Option>asfas</Select.Option>
                   <Select.Option>asfas</Select.Option>
                   <Select.Option>asfas</Select.Option>
@@ -26,7 +26,7 @@ const Banner = () => {
               </Form.Item>
 
               <Form.Item name={"searchLocation"} className='m-0 flex-grow'>
-                <Input type='text' className='p-3' placeholder='Enter Location' />
+                <Input type='text' className='p-3 rounded-none border-none' placeholder='Enter Location' />
               </Form.Item>
 
               <Form.Item className='mb-0'>
