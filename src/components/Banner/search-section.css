@@ -1,7 +1,22 @@
 .jobSearchSection {
-    width: 100%;
-    position: relative;
-    padding: 25px;
-    border-radius: 20px;
-    background: #ffffff;
+  width: 100%;
+  position: relative;
+  padding: 25px;
+  border-radius: 20px;
+  background: #ffffff;
+}
+
+.jobSearchSection input {
+  height: auto;
+  padding: 12px 15px;
+  border-radius: 0;
+  border: none;
+}
+.jobSearchSection.ant-select-selector {
+    border-color: red;
+}
+
+.jobSearchSection .ant-select-selection-placeholder,
+.jobSearchSection input::placeholder {
+  color: rgba(0, 0, 0, 0.8);
 }

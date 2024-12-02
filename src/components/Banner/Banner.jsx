@@ -1,4 +1,4 @@
-import { Button, Form, Input, Select } from 'antd'
+import { Button, Flex, Form, Input, Select } from 'antd'
 import "./search-section.css"
 import { CiSearch } from 'react-icons/ci'
 
@@ -17,23 +17,25 @@ const Banner = () => {
 
         <div className="jobSearchSection shadow-sm">
           <Form name="jobsearchForm" onFinish={searchFormHandler} autoComplete="off" size='large'>
-            <Form.Item label={null} name="skillsCompanies">
-              <Input placeholder='Enter skills / designations / companies' className='placeholder:text-black placeholder:text-lg' />
-            </Form.Item>
+            <Flex>
+              <Form.Item className='m-0 flex-1' label={null} name="skillsCompanies">
+                <Input placeholder='Enter skills / designations / companies' />
+              </Form.Item>
 
-            <Form.Item label={null} name="jobExperience">
-              <Select placeholder="Select experience">
-                <Select.Option value="fresher">Fresher (less than 1 year)</Select.Option>
-              </Select>
-            </Form.Item>
+              <Form.Item className='m-0 flex-1' label={null} name="jobExperience">
+                <Select placeholder="Select experience">
+                  <Select.Option value="fresher">Fresher (less than 1 year)</Select.Option>
+                </Select>
+              </Form.Item>
 
-            <Form.Item label={null} name="jobLocation">
-              <Input placeholder='Enter location' className='placeholder:text-black placeholder:text-lg' />
-            </Form.Item>
+              <Form.Item className='m-0 flex-1' label={null} name="jobLocation">
+                <Input placeholder='Enter location' />
+              </Form.Item>
 
-            <Form.Item label={null}>
-              <Button type="primary" htmlType="submit">Submit</Button>
-            </Form.Item>
+              <Form.Item className='m-0' label={null}>
+                <Button type="primary" htmlType="submit">Submit</Button>
+              </Form.Item>
+            </Flex>
           </Form>
         </div>
       </div>
