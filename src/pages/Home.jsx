@@ -9,7 +9,7 @@ const Home = () => {
     <>
       <Banner />
 
-      <section className='py-12'>
+      {/* <section className='py-12'>
         <div className="container mx-auto">
           <div className="w-full text-center">
             <h2 className='text-3xl mb-2'>Jobs you may be interested in</h2>
@@ -22,9 +22,9 @@ const Home = () => {
             <JobListingCard />
           </div>
         </div>
-      </section>
+      </section> */}
 
-      <section className='container mx-auto py-16'>
+      {/* <section className='container mx-auto py-16'>
         <div className="flex flex-wrap gap-5 justify-center">
           <Button icon={<BiHome />} size='large'>Remote</Button>
           <Button icon={<BiHome />} size='large'>Remote</Button>
@@ -45,9 +45,9 @@ const Home = () => {
           <Button icon={<BiHome />} size='large'>Remote</Button>
           <Button icon={<BiHome />} size='large'>Remote</Button>
         </div>
-      </section>
+      </section> */}
 
-      <section className='py-12'>
+      {/* <section className='py-12'>
         <div className="container mx-auto">
           <div className="w-full text-center">
             <h2 className='text-3xl mb-2'>Top companies hiring now</h2>
@@ -60,14 +60,15 @@ const Home = () => {
             <TopCompanyCard />
           </div>
         </div>
-      </section>
+      </section> */}
       
-      <section className='container mx-auto py-16'>
+      {/* <section className='container mx-auto py-16'>
         <h2>Featured companies actively hiring</h2>
-      </section>
-      <section className='container mx-auto py-16'>
+      </section> */}
+
+      {/* <section className='container mx-auto py-16'>
         <h2>Sponsored companies</h2>
-      </section>
+      </section> */}
     </>
   )
 }
