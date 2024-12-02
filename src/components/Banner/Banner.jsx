@@ -1,6 +1,11 @@
-import { Button, Flex, Form, Input, Select } from 'antd'
+import { Button, Form, Input, Select } from 'antd'
 import "./search-section.css"
 import { CiSearch } from 'react-icons/ci'
+
+const searchFormHandler = (values) => {
+  console.log(values)
+}
+
 const Banner = () => {
   return (
     <section className='w-full mx-auto px-5 py-16 lg:w-3/4'>
@@ -11,28 +16,24 @@ const Banner = () => {
         </div>
 
         <div className="jobSearchSection shadow-sm">
-          <Form method='post'>
-            <Flex justify='space-between' align='center' wrap="wrap" gap={20}>
-              <Form.Item name={"searchSkill"} className='m-0 flex-grow'>
-                <Input type="text" className='p-3 rounded-none border-none' placeholder='Enter skills / designations / companies' />
-              </Form.Item>
+          <Form name="jobsearchForm" onFinish={searchFormHandler} autoComplete="off" size='large'>
+            <Form.Item label={null} name="skillsCompanies">
+              <Input placeholder='Enter skills / designations / companies' className='placeholder:text-black placeholder:text-lg' />
+            </Form.Item>
 
-              <Form.Item name={"searchexperience"} className='m-0 flex-grow'>
-                <Select placeholder="Select experience" className='h-12 rounded-none border-none'>
-                  <Select.Option>asfas</Select.Option>
-                  <Select.Option>asfas</Select.Option>
-                  <Select.Option>asfas</Select.Option>
-                </Select>
-              </Form.Item>
+            <Form.Item label={null} name="jobExperience">
+              <Select placeholder="Select experience">
+                <Select.Option value="fresher">Fresher (less than 1 year)</Select.Option>
+              </Select>
+            </Form.Item>
 
-              <Form.Item name={"searchLocation"} className='m-0 flex-grow'>
-                <Input type='text' className='p-3 rounded-none border-none' placeholder='Enter Location' />
-              </Form.Item>
+            <Form.Item label={null} name="jobLocation">
+              <Input placeholder='Enter location' className='placeholder:text-black placeholder:text-lg' />
+            </Form.Item>
 
-              <Form.Item className='mb-0'>
-                <Button icon={<CiSearch />} className='searchButton'>Search</Button>
-              </Form.Item>
-            </Flex>
+            <Form.Item label={null}>
+              <Button type="primary" htmlType="submit">Submit</Button>
+            </Form.Item>
           </Form>
         </div>
       </div>

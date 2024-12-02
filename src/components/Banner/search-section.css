@@ -5,17 +5,3 @@
     border-radius: 20px;
     background: #ffffff;
 }
-
-.searchButton {
-    width: 100%;
-    color: #ffffff;
-    font-size: 18px;
-    padding: 8px 14px;
-    height: 44px;
-    background: rgb(223, 63, 0);
-}
-
-.searchButton .ant-btn-icon {
-    font-size: 24px;
-    font-weight: bold;
-}
