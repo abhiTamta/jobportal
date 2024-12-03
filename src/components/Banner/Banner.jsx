@@ -22,7 +22,7 @@ const Banner = () => {
                 <Input placeholder='Enter skills / designations / companies' />
               </Form.Item>
 
-              <Form.Item className='m-0 flex-1' label={null} name="jobExperience">
+              <Form.Item className='m-0' label={null} name="jobExperience">
                 <Select placeholder="Select experience">
                   <Select.Option value="fresher">Fresher (less than 1 year)</Select.Option>
                   <Select.Option value="1 year">1 year</Select.Option>
@@ -38,12 +38,12 @@ const Banner = () => {
                 </Select>
               </Form.Item>
 
-              <Form.Item className='m-0 flex-1' label={null} name="jobLocation">
+              <Form.Item className='m-0' label={null} name="jobLocation">
                 <Input placeholder='Enter location' />
               </Form.Item>
 
               <Form.Item className='m-0' label={null}>
-                <Button type="primary" htmlType="submit">Submit</Button>
+                <Button type="primary" htmlType="submit" className='h-auto py-2 px-5 text-lg bg-blue-900 rounded-md'>Search</Button>
               </Form.Item>
             </Flex>
           </Form>

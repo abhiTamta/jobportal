@@ -1,16 +1,17 @@
 .jobSearchSection {
-  width: 100%;
+  width: 75%;
   position: relative;
   padding: 25px;
   border-radius: 20px;
   background: #ffffff;
+  margin: auto;
 }
 
 .jobSearchSection input {
   height: auto;
   padding: 12px 15px;
   border-radius: 0;
-  border: none;
+  border: 0.6px solid #979ec2;
 }
 
 .jobSearchSection
@@ -18,7 +19,7 @@
     .ant-select-customize-input
   )
   .ant-select-selector {
-  border: none;
+  border: 0.6px solid #979ec2;;
   border-radius: 0;
   height: auto;
   padding: 5px 15px;
@@ -29,7 +30,6 @@
   color: #979ec2;
   font-size: 18px;
 }
-
 
 .jobSearchSection input:focus {
   outline: none;
