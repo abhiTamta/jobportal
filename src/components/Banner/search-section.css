@@ -12,11 +12,25 @@
   border-radius: 0;
   border: none;
 }
-.jobSearchSection.ant-select-selector {
-    border-color: red;
+.jobSearchSection
+  :where(.css-dev-only-do-not-override-1c0na6j).ant-select-outlined:not(
+    .ant-select-customize-input
+  )
+  .ant-select-selector {
+  border: none;
+  border-radius: 0;
+  height: auto;
+  padding: 5px 15px;
 }
 
 .jobSearchSection .ant-select-selection-placeholder,
 .jobSearchSection input::placeholder {
-  color: rgba(0, 0, 0, 0.8);
+  color: #979ec2;
+  font-size: 18px;
+}
+
+
+.jobSearchSection input:focus {
+  outline: none;
+  border: none;
 }

@@ -21,42 +21,42 @@ const pageRouter = createBrowserRouter([
 
     ]
   },
-  // {
-  //   path: "/user",
-  //   element: <EmployeLayout />,
-  //   children: [
-  //     {
-  //       path: "login",
-  //       element: <EmployesLogin />
-  //     },
-  //     {
-  //       path: "registor",
-  //       element: <EmployesRegistors />
-  //     },
-  //     {
-  //       path: "forgot",
-  //       element: <EmployesForgot />
-  //     },
-  //     {
-  //       path: "resetpassword",
-  //       element: <EmployesResetPass />
-  //     }
-  //   ]
-  // },
-  // {
-  //   path : "/recruit",
-  //   element : <EmployeLayout />,
-  //   children : [
-  //     {
-  //       path : "login",
-  //       element : <CompanyLogin />  
-  //     },
-  //     {
-  //       path : "registor",
-  //       element : <CeeateCompany />
-  //     }
-  //   ]
-  // }
+  {
+    path: "/user",
+    element: <EmployeLayout />,
+    children: [
+      {
+        path: "login",
+        element: <EmployesLogin />
+      },
+      {
+        path: "registor",
+        element: <EmployesRegistors />
+      },
+      {
+        path: "forgot",
+        element: <EmployesForgot />
+      },
+      {
+        path: "resetpassword",
+        element: <EmployesResetPass />
+      }
+    ]
+  },
+  {
+    path : "/recruit",
+    element : <EmployeLayout />,
+    children : [
+      {
+        path : "login",
+        element : <CompanyLogin />  
+      },
+      {
+        path : "registor",
+        element : <CeeateCompany />
+      }
+    ]
+  }
 ])
 
 export default pageRouter

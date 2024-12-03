@@ -17,7 +17,7 @@ const Banner = () => {
 
         <div className="jobSearchSection shadow-sm">
           <Form name="jobsearchForm" onFinish={searchFormHandler} autoComplete="off" size='large'>
-            <Flex>
+            <Flex gap={10}>
               <Form.Item className='m-0 flex-1' label={null} name="skillsCompanies">
                 <Input placeholder='Enter skills / designations / companies' />
               </Form.Item>
