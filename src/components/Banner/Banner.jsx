@@ -25,6 +25,16 @@ const Banner = () => {
               <Form.Item className='m-0 flex-1' label={null} name="jobExperience">
                 <Select placeholder="Select experience">
                   <Select.Option value="fresher">Fresher (less than 1 year)</Select.Option>
+                  <Select.Option value="1 year">1 year</Select.Option>
+                  <Select.Option value="2 year">2 year</Select.Option>
+                  <Select.Option value="3 year">3 year</Select.Option>
+                  <Select.Option value="4 year">4 year</Select.Option>
+                  <Select.Option value="5 year">5 year</Select.Option>
+                  <Select.Option value="6 year">6 year</Select.Option>
+                  <Select.Option value="7 year">7 year</Select.Option>
+                  <Select.Option value="8 year">8 year</Select.Option>
+                  <Select.Option value="9 year">9 year</Select.Option>
+                  <Select.Option value="10 year">10 year</Select.Option>
                 </Select>
               </Form.Item>
 

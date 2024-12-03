@@ -12,6 +12,7 @@
   border-radius: 0;
   border: none;
 }
+
 .jobSearchSection
   :where(.css-dev-only-do-not-override-1c0na6j).ant-select-outlined:not(
     .ant-select-customize-input
