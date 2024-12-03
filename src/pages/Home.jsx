@@ -1,6 +1,6 @@
 import { BiHome } from 'react-icons/bi'
 import Banner from '../components/Banner/Banner'
-import { Button } from 'antd'
+import { Button, Typography } from 'antd'
 import JobListingCard from '../components/Card/JobListingCard'
 import TopCompanyCard from '../components/Card/TopCompanyCard'
 
@@ -26,6 +26,11 @@ const Home = () => {
         </div>
       </section>
 
+
+      <section className='container mx-auto py-16'>
+        <Typography.Title className='text-center font-bold'>Top companies hiring now</Typography.Title>
+      </section>
+
       {/* <section className='py-12'>
         <div className="container mx-auto">
           <div className="w-full text-center">
@@ -39,7 +44,7 @@ const Home = () => {
             <JobListingCard />
           </div>
         </div>
-      </section> */}     
+      </section> */}
 
       {/* <section className='py-12'>
         <div className="container mx-auto">
@@ -56,9 +61,7 @@ const Home = () => {
         </div>
       </section>
       
-      <section className='container mx-auto py-16'>
-        <h2>Featured companies actively hiring</h2>
-      </section>
+      
 
       <section className='container mx-auto py-16'>
         <h2>Sponsored companies</h2>
