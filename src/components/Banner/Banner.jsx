@@ -1,6 +1,5 @@
 import { Button, Flex, Form, Input, Select } from 'antd'
 import "./search-section.css"
-import { CiSearch } from 'react-icons/ci'
 
 const searchFormHandler = (values) => {
   console.log(values)
@@ -17,13 +16,13 @@ const Banner = () => {
 
         <div className="jobSearchSection shadow-sm">
           <Form name="jobsearchForm" onFinish={searchFormHandler} autoComplete="off" size='large'>
-            <Flex gap={10}>
-              <Form.Item className='m-0 flex-1' label={null} name="skillsCompanies">
-                <Input placeholder='Enter skills / designations / companies' />
+            <Flex gap={10} align='center' justify='center'>
+              <Form.Item className='m-0 w-6/12 focus:outline-none' label={null} name="skillsCompanies">
+                <Input className='skillItem' placeholder='Enter skills / designations / companies' />
               </Form.Item>
 
-              <Form.Item className='m-0' label={null} name="jobExperience">
-                <Select placeholder="Select experience">
+              <Form.Item className='m-0 w-3/12' label={null} name="jobExperience">
+                <Select placeholder="Select experience" className='experienceItem'>
                   <Select.Option value="fresher">Fresher (less than 1 year)</Select.Option>
                   <Select.Option value="1 year">1 year</Select.Option>
                   <Select.Option value="2 year">2 year</Select.Option>
@@ -38,12 +37,12 @@ const Banner = () => {
                 </Select>
               </Form.Item>
 
-              <Form.Item className='m-0' label={null} name="jobLocation">
-                <Input placeholder='Enter location' />
+              <Form.Item className='m-0 w-3/12' label={null} name="jobLocation">
+                <Input className='locationItem' placeholder='Enter location' />
               </Form.Item>
 
               <Form.Item className='m-0' label={null}>
-                <Button type="primary" htmlType="submit" className='h-auto py-2 px-5 text-lg bg-blue-900 rounded-md'>Search</Button>
+                <Button type="primary" htmlType="submit" className='searchBtn'>Search</Button>
               </Form.Item>
             </Flex>
           </Form>

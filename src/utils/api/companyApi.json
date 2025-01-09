@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "companyName" : "Pixels Blooming",
+        "companyContact" : "9871740717",
+        "CompanyLocation" : "Delhi, New Delhi 110046",
+        "companyEmail" : "pixelsblooming@gmail.com",
+        "compnayType" : "Software Development",
+        "companyWebsite" : "www.pixelsblooming.com",
+        "companyLogo" : "https://www.pixelsblooming.com/wp-content/uploads/2021/06/cropped-Logo-1.png",
+        "companyDescription" : "Pixels Blooming is a software development company that provides software development services to clients worldwide. We are a team of experienced software developers who are passionate about creating innovative software solutions that help businesses grow. Our team has expertise in a wide range of technologies, including web development, mobile app development, and custom software development. We work closely with our clients to understand their needs and develop custom software solutions that meet their requirements. Our goal is to help our clients achieve their business goals by providing them with high-quality software solutions that are tailored to their needs.",
+        "companyRating" : 4.5,
+        "companyReviews" : 100,
+        "companyProjects" : 50,
+        "companyEmployees" : 50,
+        "companyFounded" : 2019,
+        "companyRevenue" : "$1M - $5M",
+        "companyCEO" : "Rahul Kumar",
+        "companyCatgory" : "MNC",
+        "companySocialMedia" : {
+            "facebook" : "https://www.facebook.com/pixelsblooming",
+            "twitter" : "https://twitter.com/pixelsblooming",
+            "linkedin" : "https://www.linkedin.com/company/pixelsblooming",
+            "instagram" : "https://www.instagram.com/pixelsblooming"
+        }
+    }
+]

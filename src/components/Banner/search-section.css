@@ -1,37 +1,13 @@
 .jobSearchSection {
-  width: 75%;
+  width: 100%;
   position: relative;
-  padding: 25px;
-  border-radius: 20px;
+  padding: 15px;
   background: #ffffff;
   margin: auto;
 }
-
-.jobSearchSection input {
-  height: auto;
-  padding: 12px 15px;
-  border-radius: 0;
-  border: 0.6px solid #979ec2;
+.searchBtn {
+  background: rgb(239 74 68);
 }
-
-.jobSearchSection
-  :where(.css-dev-only-do-not-override-1c0na6j).ant-select-outlined:not(
-    .ant-select-customize-input
-  )
-  .ant-select-selector {
-  border: 0.6px solid #979ec2;;
-  border-radius: 0;
-  height: auto;
-  padding: 5px 15px;
-}
-
-.jobSearchSection .ant-select-selection-placeholder,
-.jobSearchSection input::placeholder {
-  color: #979ec2;
-  font-size: 18px;
-}
-
-.jobSearchSection input:focus {
-  outline: none;
-  border: none;
+.searchBtn:hover {
+  background: rgb(2, 11, 97) !important;
 }
